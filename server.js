@@ -20,7 +20,11 @@ app.get("/",(req,res)=>{
     resText += "<p>Student Number: <mark><b> highlight Your Real Student Number </b> </mark> </p>";
     
     resText += `<p> <a href = "/CPA"> Click to visit CPA Students </a></p>
-                <p> <a href = "/highGPA"> Click to see who has the highest GPA </a></p>`
+                <p> <a href = "/highGPA"> Click to see who has the highest GPA </a></p>
+                <p> <a href = "/allStudents"> All Students
+                <p> <a href = "/addStudent"> Add a New Student`
+    resText += "Note: Locate Specific student by Student ID, e.g., </p>";
+    resText += "http://localhost:8080/student/3 </p>";
     res.send(resText);
 });
 
