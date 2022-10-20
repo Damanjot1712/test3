@@ -37,7 +37,7 @@ app.get("/CPA", (req,res)=>{
 });
 
 app.get("/allStudents", (req,res)=>{
-    data_prep.allStudents().then((data)=>{
+    data_prep.allstudents().then((data)=>{
         res.json(data);
     }).catch((reason)=>{
         res.json({message:reason});

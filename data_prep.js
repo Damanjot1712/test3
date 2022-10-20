@@ -35,7 +35,7 @@ exports.highGPA = ()=>{
         (highStudent) ? resolve(highStudent): reject("Failed finding student with highest GPA");
     }); 
 };
-exports.initialize = () =>
+exports.allStudents = () =>
 {
     return new Promise ((resolve, reject) =>{
         file.readFile('./students.json', (err,data)=> {
