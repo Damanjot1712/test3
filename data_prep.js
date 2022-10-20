@@ -45,13 +45,3 @@ exports.getAllStudents = () =>{
         }
     })
 };
-
-exports.addStudent = () => {
-    return new Promise ((resolve, reject) => {
-        var student = student.filter(student => student.isstudent == true);
-        if (student.length == 0) {
-            reject('no result');
-        }
-        resolve(students);
-    })
-};
