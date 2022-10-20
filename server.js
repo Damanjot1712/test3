@@ -50,7 +50,7 @@ app.get("/highGPA", (req, res)=>{
 });
 
 app.get("/allStudents", (req,res)=>{
-    data_prep.getAllstudents().then((data)=>{
+    data.getAllstudents().then((data)=>{
         res.json(data);
     }).catch((reason)=>{
         res.json({message:reason});
