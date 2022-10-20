@@ -1,6 +1,6 @@
 var express = require("express");
 var app = express();
-var data_prep = require("./data_prep_copy.js");
+var data_prep = require("./data_prep.js");
 
 var HTTP_PORT = process.env.PORT || 8080;
 function onHttpStart() 
