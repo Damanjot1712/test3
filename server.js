@@ -16,8 +16,8 @@ app.get("/",(req,res)=>{
     resText += " Any test or assignment is an act of trust between me and my instructor, ";
     resText += " and especially with my classmates… even when no one is watching.";
     resText += " I declare I will not break that trust. </p>";
-    resText += "<p>Name: <mark> <b> highlight Your Real Name </b> </mark> </p>";
-    resText += "<p>Student Number: <mark><b> highlight Your Real Student Number </b> </mark> </p>";
+    resText += "<p>Name: <mark> <b> Damanjot Singh </b> </mark> </p>";
+    resText += "<p>Student Number: <mark><b> 148285216 </b> </mark> </p>";
     
     resText += `<p> <a href = "/CPA"> Click to visit CPA Students </a></p>
                 <p> <a href = "/highGPA"> Click to see who has the highest GPA </a></p>
@@ -35,6 +35,15 @@ app.get("/CPA", (req,res)=>{
         res.json({message:reason});
     });
 });
+
+app.get("/allStudents", (req,res)=>{
+    data_prep.allStudents().then((data)=>{
+        res.json(data);
+    }).catch((reason)=>{
+        res.json({message:reason});
+    });
+});
+
 
 app.get("/highGPA", (req, res)=>{
     data_prep.highGPA().then((data)=>{
