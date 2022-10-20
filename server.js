@@ -36,13 +36,6 @@ app.get("/CPA", (req,res)=>{
     });
 });
 
-app.get("/allStudents", (req,res)=>{
-    data_prep.getAllstudents().then((data)=>{
-        res.json(data);
-    }).catch((reason)=>{
-        res.json({message:reason});
-    });
-});
 
 
 app.get("/highGPA", (req, res)=>{
@@ -56,6 +49,13 @@ app.get("/highGPA", (req, res)=>{
     });
 });
 
+app.get("/allStudents", (req,res)=>{
+    data_prep.getAllstudents().then((data)=>{
+        res.json(data);
+    }).catch((reason)=>{
+        res.json({message:reason});
+    });
+});
 
 app.get("*", (req, res)=>{
     res.status(404).send("Error 404: page not found.")
