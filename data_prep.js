@@ -3,7 +3,7 @@ var students=[];
 exports.prep = ()=>{
    // console.log("Testing");
    return new Promise((resolve, reject)=>{
-        fs.readFile("./students.json", (err, data)=>{
+        fs.readFile("students.json", (err, data)=>{
             if (err) {reject("unable to read file.");}
             students = JSON.parse(data);
            // console.log(students);
