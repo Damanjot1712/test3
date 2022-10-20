@@ -35,9 +35,13 @@ exports.highGPA = ()=>{
         (highStudent) ? resolve(highStudent): reject("Failed finding student with highest GPA");
     }); 
 };
-exports.allStudents = ()=>{
-    return new Promise((resolve, reject)=>{
-       let results = students.filter(student => student.program == "allStudents");
-       (results.length == 0)? reject("ERROR"):resolve(results);
-    });
-}
+exports.getAllStudents = () =>{
+    return new Promise ((resolve,reject) => {
+        if (employees.length == 0) {
+            reject('unable to read file');
+        }
+        else {
+            resolve(students);
+        }
+    })
+};
