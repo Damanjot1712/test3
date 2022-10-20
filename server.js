@@ -46,7 +46,7 @@ app.get("/allStudents", (req,res)=>{
 
 
 app.get("/highGPA", (req, res)=>{
-    data_prep.highGPA().then((data)=>{
+    data_prep.cpa().then((data)=>{
         let resText = `<h2> Highest GPA: </h2>
         <p> Student ID: ${data.studId} </p>
         <p> Name:  ${data.name} </p>
