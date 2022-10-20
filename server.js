@@ -1,3 +1,16 @@
+/*********************************************************************************
+* BTI325 – Assignment 2
+* I declare that this assignment is my own work in accordance with Seneca Academic Policy.
+* No part of this assignment has been copied manually or electronically from any other source
+* (including web sites) or distributed to other students.
+*
+* Name: __Damanjot Singh____ Student ID: __148285216_____ Date: ____20/10/2022_____
+*
+* Online (Cyclic) URL:
+* ______https://jittery-pink-panda.cyclic.app/____________________
+*
+********************************************************************************/
+
 var express = require("express");
 var app = express();
 var data_prep = require("./data_prep.js");
@@ -58,7 +71,7 @@ app.get("/allStudents", (req,res)=>{
 });
 
 app.get('/addStudent', (req, res)=>{
-    res.sendFile(path.join(__dirname + "./test3_views/addStudent.html"));
+    res.sendFile(path.join(__dirname + "/test3_views/addStudent.html"));
 });
 
 app.get("*", (req, res)=>{
