@@ -19,8 +19,8 @@ app.get("/",(req,res)=>{
     resText += "<p>Name: <mark> <b> Damanjot Singh </b> </mark> </p>";
     resText += "<p>Student Number: <mark><b> 148285216 </b> </mark> </p>";
     
-    resText += `<p> <a href = "/CPA"> Click to visit CPA Students </a></p>
-                <p> <a href = "/highGPA"> Click to see who has the highest GPA </a></p>
+    resText += `<p> <a href = "/CPA">CPA Students </a></p>
+                <p> <a href = "/highGPA"> highest GPA </a></p>
                 <p> <a href = "/allStudents"> All Students</a></p>
                 <p> <a href = "/addStudent"> Add a New Student</a></p>`
     resText += "Note: Locate Specific student by Student ID, e.g., </p>";
