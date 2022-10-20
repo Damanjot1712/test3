@@ -57,6 +57,10 @@ app.get("/allStudents", (req,res)=>{
     });
 });
 
+app.get('/addStudent', (req, res)=>{
+    res.sendFile(path.join(__dirname + "/test3_views/addStudent.html"));
+});
+
 app.get("*", (req, res)=>{
     res.status(404).send("Error 404: page not found.")
 })
